@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <meta name="description" content="Shopping cart for adding products and shooping">
+    <meta name="author" content="Mohamed Khalel">
+    <link rel="shortcut icon" href="assets/shopping-cart.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-main">
+        <div class="container">
+            <p id="notification2" class="bg-success d-inline-block px-5 py-2 text-white d-none rounded-4">email created success</p>
+            <div class="login-form w-25 m-auto p-2">
+                <div class="login-image">
+                    <img src="assets/shopping-cart.png" alt="logo">
+                </div>
+                <div class="mb-4 login-input position-relative">
+                    <input id="emailInput"  type="email" placeholder="email@example.com" class="form-control ps-5 py-2">
+                    <i class="fa-regular fa-user position-absolute top-50 translate-middle"></i>
+                </div>
+                <div class="mb-4 login-input position-relative">
+                    <input id="passInput" type="password" placeholder="enter your password" class="form-control ps-5 py-2">
+                    <i class="fa-solid fa-lock position-absolute top-50 translate-middle"></i>
+                </div>
+                <div>
+                    <button disabled id="logBtn" type="button">Login</button>
+                </div>
+                <span id="logErrMsg" class="text-warning text-center d-block mt-2"></span>
+                <p class="text-center text-white mt-3">Don't have an account yet? <a id="gosignup" class="text-decoration-none text-white ms-2 cursor-pointer fw-medium">Signup Now</a></p>
+            </div>
+            <div class="signup-form w-25 m-auto p-2 d-none ">
+                <div class="signup-image">
+                    <img src="assets/shopping-cart.png" alt="logo">
+                    
+                    
+                </div>
+                <div class="mb-4 signup-input position-relative">
+                    <input id="nameSignInput"  type="text" placeholder="enter your name" class="form-control ps-5 py-2">
+                    <i class="fa-regular fa-address-card position-absolute top-50 translate-middle"></i>
+                </div>
+                <div class="mb-4">
+                    <div class="signup-input position-relative">
+                        <input id="emailSignInput"  type="email" placeholder="email@example.com" class="form-control ps-5 py-2">
+                        <i class="fa-regular fa-user position-absolute top-50 translate-middle"></i>
+                    </div>
+                    <p id="signErrMsg" class="text-warning mt-1"></p>
+                </div>
+                <div class="mb-4 signup-input position-relative">
+                    <input id="passSignInput" type="password" placeholder="enter your password" class="form-control ps-5 py-2">
+                    <i class="fa-solid fa-lock position-absolute top-50 translate-middle"></i>
+                </div>
+                <div>
+                    <button disabled id="signupBtn" type="button">Create Account</button>
+                </div>
+                <p class="text-center text-white mt-3">Already have an account ? <a id="goLogin" class="text-decoration-none text-white ms-4 cursor-pointer fw-medium">Login Now</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

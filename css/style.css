@@ -1,0 +1,274 @@
+*{
+    box-sizing: border-box;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.cart-count{
+    top: -4px;
+    left: 20px;
+    padding: 2px 4px;
+    font-size: .875rem;
+}
+.navbar{
+    transition: all .5s;
+}
+.navbar-brand img{
+    width: 50px;
+}
+.nav-link{
+    color: #021526;
+}
+#UserName{
+    background-image: linear-gradient(to right ,#C40C0C,#FF6500);
+    background-clip: text;
+    color: transparent;
+}
+.main{
+    min-height: 100vh;
+    margin-top: 125px;
+    margin-bottom: 60px;
+}
+.fa-star:hover{
+    color: gold;
+}
+.my-card{
+    display: flex;
+    flex-direction: column;
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+    min-height: 500px !important;
+    outline: solid transparent 5px;
+}
+.my-card:hover{
+    outline: solid #02152673 5px;
+
+}
+.card-image{
+    transition: all 300ms ease-in-out;
+}
+.my-card:hover .card-image{
+    transform: scale(1.5);
+}
+.my-card .body h2{
+    background-image: linear-gradient(#1230AE,#6C48C5);
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+.my-card .body,.my-card .footer{
+    color: #021526; 
+    background-color: white;
+    position: relative;
+    z-index: 2;
+}
+.my-card .body{
+    padding:5px 15px;
+}
+.my-card .footer{
+    padding:10px 15px;
+    margin-top:auto ;
+}
+.my-card .body span,.cart-card .left span{
+    font-size: 20px;
+    font-weight: 800;
+    background-image: linear-gradient(to right,#1A4870,#1F316F);
+    background-clip: text;
+    color: transparent;
+
+}
+#addBtn{
+    background-image: linear-gradient(to right,#021526,#1A3636);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    transition: all .5s;
+    border: #D1E9F6 solid 3px;
+    position: relative;
+    overflow: hidden;
+}
+#addBtn::after{
+    content: "\f217"; 
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    font-size: 20px;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-image: linear-gradient(to left,#021526,#1A3636);
+    left: -20px;
+    top: 0;
+    transition: all .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#addBtn:hover::after{
+    width: 100%;
+    left: 0;
+}
+#notification{
+    position: fixed;
+    top: 12%;
+    right: 10px;
+    z-index: 99;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+.cart{
+    z-index: 99999;
+    left: 100%;
+    background-image: linear-gradient(to right,#021526,#1A3636);
+    transition: all 350ms ;
+}
+.cart::-webkit-scrollbar {
+    width: 10px; 
+}
+
+.cart::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+.cart::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to top,#021526,#1A3636);
+}
+
+.cart-title{
+    color: white;
+}
+.cart-title i{
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+.cart-title i:hover{
+    color: gray;
+}
+.cart-card .right .fa-trash-can{
+    transition: all .5s;
+}
+.cart-card .right .fa-trash-can:hover{
+    transform: scale(1.05);
+}
+
+.cart-card .right .cart-icons i{
+    padding: 4px;
+    border: solid black 2px;
+    border-radius: 4px;
+    transition: all 300ms;
+}
+.cart-card .right .cart-icons i:hover{
+    background-color: #021526;
+    color: white;
+}
+
+@media screen and (max-width:768px) {
+    .navbar{
+        background-color: white;
+    }
+    .cart-count{
+        left: 12px;
+    }
+    .cart-card{
+        padding: 20px;
+    }
+    .cart-image img{
+        height: auto !important;
+    }
+}
+@media screen and (min-width:768px) and (max-width:992px) {
+    .navbar{
+        background-color: white;
+    }
+    .cart-count{
+        left: 12px;
+    }
+    
+}
+
+
+
+/* start Login Page  */
+.login-main{
+    min-height: 100vh;
+    background-color: #2148C0;
+    background-image: url('../assets/image_2024-09-21_03-43-09.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-image,.signup-image{
+    text-align: center;
+    margin-bottom: 45px;
+}
+.login-image img,.signup-image img{
+    width: 120px;
+}
+.login-form button, .signup-form button{
+    width: 100%; padding: 10px 15px;
+    border: solid 2px transparent;
+    border-radius: 6px;
+    color: #2148C0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 400ms;
+}
+.login-form button:disabled{
+    background-color: gray;
+    border-color: gray;
+}
+.login-form button:disabled:hover{
+    color: gray;
+    border-color: gray;
+}
+.signup-form button:disabled{
+    background-color: gray;
+    border-color: gray;
+}
+.signup-form button:disabled:hover{
+    color: gray;
+    border-color: gray;
+}
+.form-control{
+    background-color: transparent !important;
+    color: white !important;
+}
+.form-control::placeholder{
+    color: white;
+}
+.form-control:focus{
+    outline: solid 3px white;
+}
+.login-form button:hover{
+    background-color:#2148C0 ;
+    color: white;
+    border: solid 2px white;
+}
+.signup-form button:hover{
+    background-color:#2148C0 ;
+    color: white;
+    border: solid 2px white;
+}
+.login-input i,.signup-input i{
+    left: 7%;
+    font-size:18px ;
+    color: white;
+}
+
+@media screen and (max-width:768px) {
+    .login-form,.signup-form{
+        width: 90% !important;
+    }
+}
+@media screen and (min-width:768px) and (max-width:992px) {
+    .login-form,.signup-form{
+        width: 70% !important;
+    }
+    
+}
+/* End Login Page  */
