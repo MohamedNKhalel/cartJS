@@ -11,7 +11,7 @@ let existFalg = false;
 window.onload = init;
 function init(){
     if(localStorage.getItem('token') != null){
-        window.location.href='../home.html';
+        window.location.href='home.html';
     }
 }
 
@@ -116,7 +116,7 @@ loginBtn.addEventListener('click',()=>{
 
 function checkUser(email,password){
     for(let i = 0 ; i < users.length ; i++){
-        if(email == users[i].email && password == users[i].pass){
+        if(email.toLowerCase() == users[i].email.toLowerCase() && password.toLowerCase() == users[i].pass.toLowerCase()){
             userName = users[i].name;
             localStorage.setItem('userName',userName);
             return true;
@@ -128,7 +128,7 @@ function login(email,password){
     if(checkUser(email,password)){
         document.getElementById('logErrMsg').innerHTML = '';
         localStorage.setItem('token','true');
-        window.location.href = '../home.html';
+        window.location.reload()
     }
     else{
         document.getElementById('logErrMsg').innerHTML = `<i class="fa-regular fa-circle-xmark"></i> Incorrect email or password`

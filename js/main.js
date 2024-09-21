@@ -175,7 +175,7 @@ let logOutBtn = document.getElementById('logOutBtn');
 
 function init(){
     if(localStorage.getItem('token') == null){
-        window.location.href = '../index.html'
+        window.location.href = 'index.html'
     }
 }
 
@@ -405,3 +405,4 @@ window.onload = ()=>{
     displayProducts()
     init()
 }
+
