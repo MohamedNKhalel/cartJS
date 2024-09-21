@@ -10,7 +10,7 @@ let existFalg = false;
 
 window.onload = init;
 function init(){
-    if(localStorage.getItem('token') == 'true'){
+    if(localStorage.getItem('token') != null){
         window.location.href='../home.html';
     }
 }
@@ -128,7 +128,7 @@ function login(email,password){
     if(checkUser(email,password)){
         document.getElementById('logErrMsg').innerHTML = '';
         localStorage.setItem('token','true');
-        window.location.reload();
+        window.location.href = '../home.html';
     }
     else{
         document.getElementById('logErrMsg').innerHTML = `<i class="fa-regular fa-circle-xmark"></i> Incorrect email or password`
