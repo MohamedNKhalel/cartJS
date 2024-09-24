@@ -182,7 +182,7 @@ function init(){
 logOutBtn.addEventListener('click',()=>{
     localStorage.removeItem('token');
     localStorage.removeItem('userName');
-    window.location.href = '../index.html'
+    window.location.href = 'index.html'
 })
 
 document.querySelectorAll('.fa-star').forEach(star=>{
