@@ -182,7 +182,7 @@ function init(){
 logOutBtn.addEventListener('click',()=>{
     localStorage.removeItem('token');
     localStorage.removeItem('userName');
-    window.location.href = 'index.html'
+    window.location.href = ' index.html'
 })
 
 document.querySelectorAll('.fa-star').forEach(star=>{
@@ -246,8 +246,10 @@ function addToCart(index,id){
         }
         else{
             cartNum++;
-            cartCount.innerHTML = cartNum
+            cartCount.innerHTML = cartNum;
+            products[index].quantity = 1
             cartArr.push(products[index])
+
             displayCartProducts();
             calcPrice();
             localStorage.setItem('cart',JSON.stringify(cartArr))

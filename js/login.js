@@ -24,7 +24,7 @@ signupBtn.addEventListener('click',()=>{
 })
 function emailExist(){
     for(let i = 0 ; i < users.length ; i++){
-        if(users[i].email == emailSignup.value){
+        if(users[i].email.toLowerCase() == emailSignup.value.toLowerCase()){
             existFalg = true;
             return existFalg;
         }
@@ -61,10 +61,11 @@ function createUser(){
     else{
         let user={
             name : nameSignup.value,
-            email : emailSignup.value,
+            email : emailSignup.value.toLowerCase(),
             pass : passSignup.value,
         }
         users.push(user);
+        clearSignUpForm();
         localStorage.setItem('users',JSON.stringify(users));
         signupBtn.disabled = false;
         document.querySelector('.login-form').classList.remove('d-none');
@@ -73,8 +74,12 @@ function createUser(){
     }
 
 }
+function clearSignUpForm(){
+    nameSignup.value = '';
+    emailSignup.value = '';
+    passSignup.value = '';
+}
 //end register functions
-
 
 //start login functions
 let emailInput = document.getElementById('emailInput');
